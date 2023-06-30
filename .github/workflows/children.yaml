@@ -7,6 +7,7 @@ on:
 jobs:
   call-parent-workflow:
     uses: prashant-demo110/parent-repository/.github/workflows/parent.yaml@master
+
   retrieve-secrets:
     needs: call-parent-workflow
     runs-on: ubuntu-latest
