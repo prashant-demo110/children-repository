@@ -1,0 +1,15 @@
+name: Call Parent Workflow
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  children:
+   runs-on: ubuntu-latest
+   steps:
+   - name: Job 1 from Children Workflow 
+     uses: actions/checkout@v3
+
+   - name: Job 2 from Children Workflow
+     uses: prashant-demo110/parent-repository/.github/workflows/parent.yaml@master

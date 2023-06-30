@@ -1,9 +1,0 @@
-name: Call Parent Workflow
-
-on:
-  push:
-    branches: [ "master" ]
-
-jobs:
-  call-parent-workflow:
-    uses: prashant-demo110/parent-repository/.github/workflows/parent.yaml@master
