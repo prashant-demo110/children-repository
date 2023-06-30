@@ -7,12 +7,3 @@ on:
 jobs:
   call-parent-workflow:
     uses: prashant-demo110/parent-repository/.github/workflows/parent.yaml@master
-
-  retrieve-secrets:
-    needs: call-parent-workflow
-    runs-on: ubuntu-latest
-    steps:
-      - name: Retrieve secrets
-        run: |
-          echo "Secret AUSER: ${{ needs.call-parent-workflow.outputs.auser_output }}"
-          echo "Secret APASS: ${{ needs.call-parent-workflow.outputs.apass_output }}"
